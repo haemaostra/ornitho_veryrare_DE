@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      RTELEGRAMBOT_TOKEN: ${{ secrets.ORNITHO_BOT }}
+      ORNITHO_BOT: ${{ secrets.ORNITHO_BOT }}
       ORNITHO_USER: ${{ secrets.ORNITHO_USER }}
       ORNITHO_PW: ${{ secrets.ORNITHO_PW }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
