@@ -23,7 +23,7 @@ chat_id <- Sys.getenv("CHAT_ID")
 
 #### scrap rare observation ----
 #Address of the login webpage
-login<-"https://www.ornitho.de/index.php?m_id=1180&sp_DOffset=1&sp_PChoice=all&sp_Cat[never]=1&sp_Cat[veryrare]=1&sp_FDisplay=SPECIES_PLACE_DATE"
+login<-"https://www.ornitho.de/index.php?m_id=1180&sp_DOffset=1&sp_PChoice=all&sp_Cat%5Bnever%5D=1&sp_Cat%5Bveryrare%5D=1&sp_FDisplay=SPECIES_PLACE_DATE"
 
 #create a web session with the desired login address
 pgsession<-session(login)
