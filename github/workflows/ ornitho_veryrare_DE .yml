@@ -1,17 +1,18 @@
-name: ornitho_very_rare_telegram
+name: ornitho_veryrare_DE
 
 on:
   schedule:
     - cron: '0 6-20 * * *'  # At minute 0 past every hour from 6 through 20.
 
 jobs:
-  ornitho_very_rare_telegram-post:
+  ornitho_veryrare_DE-post:
     runs-on: macos-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      RTELEGRAMBOT_TOKEN: ${{ secrets.RTELEGRAMBOT_TOKEN }}
+      RTELEGRAMBOT_TOKEN: ${{ secrets.ORNITHO_BOT }}
       ORNITHO_USER: ${{ secrets.ORNITHO_USER }}
       ORNITHO_PW: ${{ secrets.ORNITHO_PW }}
+      CHAT_ID: ${{ secrets.CHAT_ID }}
       
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +24,7 @@ jobs:
       - name: Install xml2 package
         run: Rscript -e 'install.packages("xml2", dependencies = TRUE)'
       - name: Create and save file
-        run: Rscript ornitho_very_rare_telegram.R
+        run: Rscript ornitho_veryrare_DE.R
 
       - name: Commit files
         run: |
