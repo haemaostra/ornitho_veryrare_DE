@@ -20,9 +20,8 @@ updates <- bot$getUpdates()
 
 # Retrieve your chat id
 # Note: you should text the bot before calling `getUpdates`
-chat_id <- updates[[3L]]$from_chat_id() #1 für bot 2 für gruppenchat
-#chat_id <- 92150075 # ID BOT
-#chat_id <- -530884991 # ID GROUP
+#chat_id <- updates[[2L]]$from_chat_id() #1 fÃ¼r bot 2 fÃ¼r gruppenchat
+chat_id <- Sys.getenv("CHAT_ID")
 
 #### scrap rare observation ----
 #Address of the login webpage
@@ -31,7 +30,7 @@ login<-"https://www.ornitho.de/index.php?m_id=1180&sp_DOffset=1&sp_PChoice=all&s
 #create a web session with the desired login address
 pgsession<-html_session(login)
 pgform<-html_form(pgsession)[[1]]  #in this case the submit is the 1st form
-filled_form<-set_values(pgform, USERNAME= Sys.getenv("ornitho_USER"), PASSWORD= Sys.getenv("ornitho_PW"))
+filled_form<-set_values(pgform, USERNAME= Sys.getenv("ORNITHO_USER"), PASSWORD= Sys.getenv("ORNITHO_PW"))
 submit_form(pgsession, filled_form)
 
 #pre allocate the final results dataframe.
