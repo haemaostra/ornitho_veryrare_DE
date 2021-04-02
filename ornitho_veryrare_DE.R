@@ -1,7 +1,5 @@
 rm(list=ls()) 
 
-setwd("C:/Users/NP/Nextcloud/R_und_rtrim/ornitho_very_rare_telegram")
-
 library(telegram.bot)
 library(rvest)
 library(xml2)
