@@ -1,4 +1,11 @@
 "x"
 "1" "Art nicht in der Liste (Species ignota)
- Drosseluferl‰ufer (Actitis macularius)
- Seidens‰nger (Cettia cetti)"
+ Kaiseradler (Aquila heliaca)
+ Triel (Burhinus oedicnemus)
+ Steppenkiebitz (Vanellus gregarius)
+ Drosseluferl√§ufer (Actitis macularius)
+ R√∂telschwalbe (Cecropis daurica)
+ Seidens√§nger (Cettia cetti)
+ Schafstelze (ssp. cinereocapilla)
+ Aschkopf-Schafstelze (Motacilla flava cinereocapilla)
+ Zwergammer (Emberiza pusilla)"
