@@ -1,11 +1,2 @@
 "x"
-"1" "Art nicht in der Liste (Species ignota)
- Kaiseradler (Aquila heliaca)
- Triel (Burhinus oedicnemus)
- Steppenkiebitz (Vanellus gregarius)
- Drosseluferläufer (Actitis macularius)
- Rötelschwalbe (Cecropis daurica)
- Seidensänger (Cettia cetti)
- Schafstelze (ssp. cinereocapilla)
- Aschkopf-Schafstelze (Motacilla flava cinereocapilla)
- Zwergammer (Emberiza pusilla)"
+"1" "test"
