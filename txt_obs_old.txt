@@ -1,6 +1,5 @@
 "x"
-"1" "Art nicht in der Liste (Species ignota)
- Gleitaar (Elanus caeruleus)
+"1" "Gleitaar (Elanus caeruleus)
  Kaiseradler (Aquila heliaca)
  Triel (Burhinus oedicnemus)
  Steppenkiebitz (Vanellus gregarius)
