@@ -28,7 +28,7 @@ login<-"https://www.ornitho.de/index.php?m_id=1180&sp_DOffset=1&sp_PChoice=all&s
 #create a web session with the desired login address
 pgsession<-session(login)
 pgform<-html_form(pgsession)[[1]]  #in this case the submit is the 1st form
-filled_form<-html_form_set(pgform, USERNAME= Sys.getenv("ornitho_USER"), PASSWORD= Sys.getenv("ornitho_PW"))
+filled_form<-html_form_set(pgform, USERNAME= Sys.getenv("ORNITHO_USER"), PASSWORD= Sys.getenv("ORNITHO_PW"))
 session_submit(pgsession, filled_form)
 
 #pre allocate the final results dataframe.
