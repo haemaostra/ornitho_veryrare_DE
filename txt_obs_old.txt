@@ -1,4 +1,6 @@
 "x"
 "1" "Gleitaar (Elanus caeruleus)
  Steppenkiebitz (Vanellus gregarius)
- Seidensänger (Cettia cetti)"
+ Seidensänger (Cettia cetti)
+ Schafstelze (ssp. cinereocapilla)
+ Aschkopf-Schafstelze (Motacilla flava cinereocapilla)"
