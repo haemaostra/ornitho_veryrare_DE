@@ -1,7 +1,8 @@
 "x"
 "1" "Gleitaar (Elanus caeruleus)
+ Adler
+ unbestimmt (Aquila sp.)
  Steppenkiebitz (Vanellus gregarius)
- Doppelschnepfe (Gallinago media)
  Seidensänger (Cettia cetti)
  Schafstelze (ssp. cinereocapilla)
  Aschkopf-Schafstelze (Motacilla flava cinereocapilla)"
