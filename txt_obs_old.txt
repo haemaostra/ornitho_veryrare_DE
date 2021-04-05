@@ -1,12 +1,2 @@
 "x"
-"1" "Gleitaar (Elanus caeruleus)
- Zwergadler (Aquila pennata)
- Adler
- unbestimmt (Aquila sp.)
- Kaiseradler (Aquila heliaca)
- Triel (Burhinus oedicnemus)
- Steppenkiebitz (Vanellus gregarius)
- Drosseluferläufer (Actitis macularius)
- Seidensänger (Cettia cetti)
- Schafstelze (ssp. cinereocapilla)
- Aschkopf-Schafstelze (Motacilla flava cinereocapilla)"
+"1" "Hausrotschwanz (ssp. phoenicuroides) (Phoenicurus ochruros phoenicuroides)"
