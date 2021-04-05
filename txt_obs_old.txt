@@ -1,4 +1,7 @@
 "x"
 "1" "Gleitaar (Elanus caeruleus)
  Zwergadler (Aquila pennata)
- Drosseluferläufer (Actitis macularius)"
+ Wanderfalke (ssp. calidus) (Falco peregrinus calidus)
+ Drosseluferläufer (Actitis macularius)
+ Schafstelze (ssp. feldegg)
+ Maskenschafstelze (Motacilla flava feldegg)"
