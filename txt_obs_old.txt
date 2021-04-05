@@ -1,2 +1,4 @@
 "x"
-"1" "Drosseluferläufer (Actitis macularius)"
+"1" "Gleitaar (Elanus caeruleus)
+ Zwergadler (Aquila pennata)
+ Drosseluferläufer (Actitis macularius)"
