@@ -1,2 +1,3 @@
 "x"
-"1" "Zwergadler (Aquila pennata)"
+"1" "Zwergadler (Aquila pennata)
+ Drosseluferläufer (Actitis macularius)"
