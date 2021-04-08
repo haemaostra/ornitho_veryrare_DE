@@ -3,6 +3,7 @@
  Zwergadler (Aquila pennata)
  Kaiseradler (Aquila heliaca)
  Triel (Burhinus oedicnemus)
+ Steppenkiebitz (Vanellus gregarius)
  Drosseluferläufer (Actitis macularius)
  Polarmöwe (Larus glaucoides)
  Seidensänger (Cettia cetti)"
