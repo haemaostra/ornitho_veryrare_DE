@@ -1,4 +1,6 @@
 "x"
-"1" "Drosseluferläufer (Actitis macularius)
+"1" "Zwergadler (Aquila pennata)
+ Kaiseradler (Aquila heliaca)
+ Drosseluferläufer (Actitis macularius)
  Polarmöwe (Larus glaucoides)
  Seidensänger (Cettia cetti)"
