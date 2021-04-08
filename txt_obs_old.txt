@@ -1,9 +1,2 @@
 "x"
-"1" "Zwergscharbe (Phalacrocorax pygmeus)
- Zwergadler (Aquila pennata)
- Kaiseradler (Aquila heliaca)
- Triel (Burhinus oedicnemus)
- Steppenkiebitz (Vanellus gregarius)
- Drosseluferläufer (Actitis macularius)
- Polarmöwe (Larus glaucoides)
- Seidensänger (Cettia cetti)"
+"1" "Eqo975S57SW5l1WfYFoVC9qncYTxKuGM+zKjgF0XPa+Wpqg2Feacfv7SIFhhfETJBOzEHdyj6IdcceqVoxR6Dw9bQ4MK6WolN4h8xOdjNhPWgtn15ozgC8AyWqDTcyAh6JMisZF8L/F7W4DT2cKgsC7HkfnzVuAeh09HI3+EYrpWb+8K3qI8RZWSc24Y8665EywUZPEAz8vvKPOFPDHUj/OhiWj6p71b8Tj8McAJFE9K2cO9CE4lz/03KWrpe2My2xruGyX1hfiy0vi7212SaVc4/VfgS86uVDpZjec/6SaTHlhbqNkIFwZntRK1R8or2gSFIm4KxRr8bNhsWFSGjGXmzrNLJsrDWGjCTRap2adS+1fNrdNpTlLJzjKJuMhRYzlZfUwgrOO642T3jkCus9bO0eZnI4lnsn0O/HSGT/WlK3VXdCW+E3MgWu5KwEDQEG0GC9q3WrVXM4x6VxJ5jyknpW9gTFr17umIoH0bqxwLv69lQMWoVIX/u7oTnruau6//PyYCpEq9w2bx2LsbAhu7EWHZUXAi0IZSqPiMehdtWt9TFxJXVnDsfTBYFrAxnWBk+DNPFYp+Wbdjd0aoQKcLe7PylWU7ahvIx8gareXwQi2Vu9Kw6eeM0rtwyJCLIDj87R21VFxIFKWP3vEXQKqAUV8="
