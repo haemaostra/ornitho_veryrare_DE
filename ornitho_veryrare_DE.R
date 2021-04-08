@@ -3,6 +3,7 @@ rm(list=ls())
 library(telegram.bot)
 library(rvest)
 library(xml2)
+library(safer)
 
 #### Building an R Bot in 3 steps ----
 # 1. Creating the Updater object
@@ -51,20 +52,26 @@ txt_obs_old<-read.table("txt_obs_old.txt") # Alte Art des Tages lesen
 
 txt_obs_old<-as.character(txt_obs_old$x[1]) #Alte Art des Tages zu character
 
+txt_obs_old <- decrypt_string(txt_obs_old)
+txt_obs_old <- iconv(txt_obs_old, "UTF-8", "WINDOWS-1252")
+
 txt_obs <- ornithoDErare %>% 
   rvest::html_nodes('body') %>% 
-  xml2::xml_find_all("//div[contains(@class, 'listTop')]") %>% 
+  xml2::xml_find_all("//div[@class='listTop' or @class='listSubmenu']") %>% 
   rvest::html_text()
 
 txt_obs
+txt_obs<-gsub(".*/","",txt_obs)
 
 # send rare observations to telegram
-txt_obs <- toString(txt_obs)
-txt_obs <- gsub(",", "\n", txt_obs)
+txt_obs <- paste(txt_obs, collapse = "; ")
+txt_obs <- gsub(";", "\n", txt_obs)
+txt_obs
 
 # send message if list is updated
 if (txt_obs_old!=txt_obs) {
   bot$sendMessage(chat_id = chat_id, text = txt_obs, parse_mode = "Markdown")
+  txt_obs <- encrypt_string(txt_obs, ascii = TRUE)
   write.table(txt_obs,"txt_obs_old.txt") # neue Art des Tages als alte speichern
 }
 
