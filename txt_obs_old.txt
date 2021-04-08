@@ -1,5 +1,6 @@
 "x"
-"1" "Zwergadler (Aquila pennata)
+"1" "Zwergscharbe (Phalacrocorax pygmeus)
+ Zwergadler (Aquila pennata)
  Kaiseradler (Aquila heliaca)
  Triel (Burhinus oedicnemus)
  Drosseluferläufer (Actitis macularius)
