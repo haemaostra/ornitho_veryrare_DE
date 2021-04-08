@@ -1,4 +1,2 @@
 "x"
-"1" "Zwergadler (Aquila pennata)
- Drosseluferläufer (Actitis macularius)
- Rötelschwalbe (Cecropis daurica)"
+"1" "Seidensänger (Cettia cetti)"
