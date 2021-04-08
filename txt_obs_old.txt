@@ -1,3 +1,4 @@
 "x"
-"1" "Polarmöwe (Larus glaucoides)
+"1" "Drosseluferläufer (Actitis macularius)
+ Polarmöwe (Larus glaucoides)
  Seidensänger (Cettia cetti)"
