@@ -39,7 +39,7 @@ results<-data.frame()
 #for (i in 1:5)
 #{
 #base address of the pages to extract information from
-url<-"https://www.ornitho.de/index.php?m_id=1180&sp_DOffset=1&sp_PChoice=all&sp_Cat%5Bnever%5D=1&sp_Cat%5Bveryrare%5D=1&sp_FDisplay=SPECIES_PLACE_DATE" # nicht original URL
+url<-"https://www.ornitho.de/index.php?m_id=94&sp_DOffset=1&sp_Cat%5Bnever%5D=1&sp_Cat%5Bveryrare%5D=1&sp_PChoice=all"
 #url<-paste0(url, i)
 page<-session_jump_to(pgsession, url)
 #}
@@ -48,30 +48,52 @@ ornithoDErare <- read_html(page)
 ornithoDErare
 str(ornithoDErare)
 
-txt_obs_old<-read.table("txt_obs_old.txt") # Alte Art des Tages lesen
+decrypt_file("df_obs_old_enc.txt", ascii = TRUE, outfile = "df_obs_old.txt")
+df_obs_old<- read.table("df_obs_old.txt") # Alte Art des Tages lesen
+unlink("df_obs_old.txt")
+df_obs_old$anzahl<-as.character(df_obs_old$anzahl)
 
-txt_obs_old<-as.character(txt_obs_old$x[1]) #Alte Art des Tages zu character
-
-txt_obs_old <- decrypt_string(txt_obs_old)
-txt_obs_old <- iconv(txt_obs_old, "UTF-8", "WINDOWS-1252")
-
-txt_obs <- ornithoDErare %>% 
+ort <- ornithoDErare %>% 
   rvest::html_nodes('body') %>% 
-  xml2::xml_find_all("//div[@class='listTop' or @class='listSubmenu']") %>% 
+  xml2::xml_find_all("//div[@class='listSubmenu']") %>% 
   rvest::html_text()
 
-txt_obs
-txt_obs<-gsub(".*/","",txt_obs)
+ort
+ort<-gsub(".*/ ","",ort)
+
+art <- ornithoDErare %>% 
+  rvest::html_nodes('.bodynocolor b') %>% 
+  rvest::html_text()
+
+anzahl <- ornithoDErare %>% 
+  rvest::html_nodes('.bodynocolor span') %>% 
+  rvest::html_text()
+
+df_obs<-data.frame(anzahl,art,ort)
+df_obs <- df_obs[order(art),] 
+df_obs_update<-dplyr::anti_join(df_obs,df_obs_old)
 
 # send rare observations to telegram
+txt_obs<-apply(df_obs,1,paste,collapse=" ")
 txt_obs <- paste(txt_obs, collapse = "; ")
 txt_obs <- gsub(";", "\n", txt_obs)
-txt_obs
+
+txt_obs_old<-apply(df_obs_old,1,paste,collapse=" ")
+txt_obs_old <- paste(txt_obs_old, collapse = "; ")
+txt_obs_old <- gsub(";", "\n", txt_obs_old)
+
+txt_obs_update<-apply(df_obs_update,1,paste,collapse=" ")
+txt_obs_update <- paste(txt_obs_update, collapse = "; ")
+txt_obs_update <- gsub(";", "\n", txt_obs_update)
 
 # send message if list is updated
 if (txt_obs_old!=txt_obs) {
-  bot$sendMessage(chat_id = chat_id, text = txt_obs, parse_mode = "Markdown")
-  txt_obs <- encrypt_string(txt_obs, ascii = TRUE)
-  write.table(txt_obs,"txt_obs_old.txt") # neue Art des Tages als alte speichern
+  if(txt_obs_update!=""){
+    bot$sendMessage(chat_id = chat_id, text = txt_obs_update, parse_mode = "Markdown")
+  }
+  #txt_obs <- encrypt_string(txt_obs, ascii = TRUE)
+  write.table(df_obs,"df_obs_old.txt") # neue Art des Tages als alte speichern
+  unlink("df_obs_old_enc.txt")
+  encrypt_file("df_obs_old.txt", ascii = TRUE, outfile = "df_obs_old_enc.txt")
+  unlink("df_obs_old.txt")
 }
-
