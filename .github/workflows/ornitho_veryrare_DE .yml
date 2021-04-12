@@ -24,6 +24,8 @@ jobs:
         run: Rscript -e 'install.packages("xml2", dependencies = TRUE)'
       - name: Install safer package
         run: Rscript -e 'install.packages("safer", dependencies = TRUE)'
+      - name: Install dplyr package
+        run: Rscript -e 'install.packages("dplyr", dependencies = TRUE)'
       - name: Create and save file
         run: Rscript ornitho_veryrare_DE.R
 
