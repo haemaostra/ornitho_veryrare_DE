@@ -4,6 +4,7 @@ library(telegram.bot)
 library(rvest)
 library(xml2)
 library(safer)
+library(dplyr)
 
 #### Building an R Bot in 3 steps ----
 # 1. Creating the Updater object
