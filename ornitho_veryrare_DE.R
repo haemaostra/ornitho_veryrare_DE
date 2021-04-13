@@ -53,6 +53,8 @@ decrypt_file("df_obs_old_enc.txt", ascii = TRUE, outfile = "df_obs_old.txt")
 df_obs_old<- read.table("df_obs_old.txt") # Alte Art des Tages lesen
 unlink("df_obs_old.txt")
 df_obs_old$anzahl<-as.character(df_obs_old$anzahl)
+df_obs_old$art<-as.character(df_obs_old$art)
+df_obs_old$ort<-as.character(df_obs_old$ort)
 
 ort <- ornithoDErare %>% 
   rvest::html_nodes('body') %>% 
@@ -90,7 +92,7 @@ txt_obs_update <- gsub(";", "\n", txt_obs_update)
 # send message if list is updated
 if (txt_obs_old!=txt_obs) {
   if(txt_obs_update!=""){
-    bot$sendMessage(chat_id = chat_id, text = txt_obs_update, parse_mode = "Markdown")
+    bot$sendMessage(chat_id = chat_id, text = txt_obs_update) #, parse_mode = "Markdown"
   }
   #txt_obs <- encrypt_string(txt_obs, ascii = TRUE)
   write.table(df_obs,"df_obs_old.txt") # neue Art des Tages als alte speichern
