@@ -52,12 +52,12 @@ str(ornithoDErare)
 decrypt_file("df_obs_old_enc.txt", ascii = TRUE, outfile = "df_obs_old.txt")
 df_obs_old<- read.table("df_obs_old.txt") # Alte Art des Tages lesen
 unlink("df_obs_old.txt")
-if (nrow(df_obs_old) == 0){
-  anzahl <- NA
-  art <- NA
-  ort <- NA
-  df_obs_old<-data.frame(anzahl,art,ort)
-}
+#if (nrow(df_obs_old) == 0){
+#  anzahl <- NA
+#  art <- NA
+#  ort <- NA
+#  df_obs_old<-data.frame(anzahl,art,ort)
+#}
 df_obs_old$anzahl<-as.character(df_obs_old$anzahl)
 df_obs_old$art<-as.character(df_obs_old$art)
 df_obs_old$ort<-as.character(df_obs_old$ort)
@@ -80,7 +80,12 @@ anzahl <- ornithoDErare %>%
 
 df_obs<-data.frame(anzahl,art,ort)
 df_obs <- df_obs[order(art),] 
-df_obs_update<-dplyr::anti_join(df_obs,df_obs_old)
+#df_obs_update<-dplyr::anti_join(df_obs,df_obs_old)
+if (nrow(df_obs_old) == 0){
+  df_obs_update<-df_obs
+} else {
+  df_obs_update<-dplyr::anti_join(df_obs,df_obs_old)
+}
 
 # send rare observations to telegram
 txt_obs<-apply(df_obs,1,paste,collapse=" ")
