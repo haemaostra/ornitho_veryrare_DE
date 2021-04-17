@@ -1,7 +1,8 @@
 name: ornitho_veryrare_DE
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0,30 * * * *'  # At minute 0 past every hour from 6 through 20.
 
 jobs:
   ornitho_veryrare_DE-post:
