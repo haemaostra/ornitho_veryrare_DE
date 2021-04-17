@@ -52,6 +52,12 @@ str(ornithoDErare)
 decrypt_file("df_obs_old_enc.txt", ascii = TRUE, outfile = "df_obs_old.txt")
 df_obs_old<- read.table("df_obs_old.txt") # Alte Art des Tages lesen
 unlink("df_obs_old.txt")
+if (nrow(df_obs_old) == 0){
+  anzahl <- NA
+  art <- NA
+  ort <- NA
+  df_obs_old<-data.frame(anzahl,art,ort)
+}
 df_obs_old$anzahl<-as.character(df_obs_old$anzahl)
 df_obs_old$art<-as.character(df_obs_old$art)
 df_obs_old$ort<-as.character(df_obs_old$ort)
