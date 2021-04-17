@@ -50,7 +50,7 @@ ornithoDErare
 str(ornithoDErare)
 
 decrypt_file("df_obs_old_enc.txt", ascii = TRUE, outfile = "df_obs_old.txt")
-df_obs_old<- read.table("df_obs_old.txt") # Alte Art des Tages lesen
+df_obs_old<- read.table("df_obs_old.txt", header = TRUE) # Alte Art des Tages lesen
 unlink("df_obs_old.txt")
 #if (nrow(df_obs_old) == 0){
 #  anzahl <- NA
